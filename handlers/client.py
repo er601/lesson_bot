@@ -20,7 +20,8 @@ async def help(message: types.Message):
                         f'1. /quiz1 this command for hilarious quiz questions,'
                         f' quiz has continue by clicking '
                         f'button *Следующая Викторина* \n'
-                        f'2. Also u can share location or info about u')
+                        f'2. Also u can share location or info about u \n'
+                        f'3. /shows U can watch collection of tvshows')
 
 
 async def quiz_1(message: types.Message):

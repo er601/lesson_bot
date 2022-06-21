@@ -8,14 +8,14 @@ def sql_create():
     cursor = connection.cursor()
     if connection:
         print("Database connected successfully")
-        create_table_query = '''
-        CREATE TABLE IF NOT EXISTS tvshow
-        (photo TEXT, title TEXT PRIMARY KEY, description TEXT) 
-        '''
-        connection.execute(
-            create_table_query
-        )
-        connection.commit()
+    create_table_query = '''
+    CREATE TABLE IF NOT EXISTS tvshow
+    (photo TEXT, title TEXT PRIMARY KEY, description TEXT) 
+    '''
+    connection.execute(
+        create_table_query
+    )
+    connection.commit()
 
 
 async def sql_insert(state):
@@ -41,5 +41,5 @@ async def sql_select_for_delete():
 async def sql_delete(data):
     cursor.execute('''
     DELETE FROM tvshow WHERE title == ?
-    ''', (data)),
+    ''', (data,))
     connection.commit()

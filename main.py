@@ -15,6 +15,6 @@ callback_quiz.register_handlers_callback_quiz(dp)
 extra.register_handlers_extra(dp)
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True,
-                           on_startup=on_startup
-                           )
+    executor.start_polling(dp,
+                           skip_updates=True,
+                           on_startup=on_startup)

@@ -24,15 +24,15 @@ async def is_admin_function(message: types.Message):
     else:
         await bot.send_message(message.chat.id,
                                "Hello, u r not allowed to this function")
-    print(message.from_user.id)
     await bot.delete_message(message.chat.id,
                              message.message_id)
 
 
-async def cancel_command(message: types.Message, state: FSMContext):
+async def cancel_command(message: types.Message,
+                         state: FSMContext):
     current_state = await state.get_state()
     if current_state is None:
-        await message.reply("State is not, Rellax")
+        await message.reply("State is None, Rellax")
     await state.finish()
     await message.reply('Admin, rellax, states cancelled successfully')
 
@@ -114,6 +114,6 @@ def register_handler_admin(dp: Dispatcher):
                                 content_types=['text'],
                                 state=ShowsAdminStates.description)
     dp.register_callback_query_handler(complete_delete,
-                                       lambda call: call.data and call.data.startswith("delete"))
+                                       lambda call: call.data and call.data.startswith("delete "))
     dp.register_message_handler(delete_data, commands=['delete'])
 
