@@ -1,5 +1,6 @@
 aiogram==2.20
 aiohttp==3.8.1
+aioschedule==0.5.2
 aiosignal==1.2.0
 appdirs==1.4.3
 apturl==0.5.2
