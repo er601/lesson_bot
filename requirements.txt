@@ -9,8 +9,10 @@ async-timeout==4.0.2
 attrs==21.4.0
 Babel==2.9.1
 bcrypt==3.1.7
+beautifulsoup4==4.11.1
 blinker==1.4
 Brlapi==0.7.0
+bs4==0.0.1
 certifi==2022.5.18.1
 chardet==3.0.4
 charset-normalizer==2.0.12
@@ -83,6 +85,7 @@ requests-unixsocket==0.2.0
 SecretStorage==2.3.1
 simplejson==3.16.0
 six==1.14.0
+soupsieve==2.3.2.post1
 systemd-python==234
 termcolor==1.1.0
 ttystatus==0.38
